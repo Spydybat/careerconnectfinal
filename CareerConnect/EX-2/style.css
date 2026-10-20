@@ -1,0 +1,18 @@
+/* External Stylesheet for Career Connect */
+.external-card {
+    background: #fef3c7;
+    border: 2px solid #d97706;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+.external-title {
+    color: #b45309;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+}
+.external-text {
+    color: #78350f;
+    font-size: 14px;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Connect - Profile Registration</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f3f2ef; padding: 30px; }
+        .form-card { max-width: 600px; margin: 0 auto; background: white; padding: 32px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+        h2 { color: #0a66c2; margin-top: 0; }
+        .form-group { margin-bottom: 18px; }
+        label { display: block; font-weight: 600; font-size: 13px; margin-bottom: 6px; color: #334155; }
+        input, select, textarea { width: 100%; box-sizing: border-box; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; }
+        .error { color: #dc2626; font-size: 12px; margin-top: 4px; display: none; }
+        .submit-btn { background: #0a66c2; color: white; border: none; padding: 12px 24px; border-radius: 24px; font-weight: 600; cursor: pointer; width: 100%; font-size: 15px; }
+        .submit-btn:hover { background: #004182; }
+        .success-box { display: none; background: #ecfdf5; border: 1px solid #10b981; color: #065f46; padding: 16px; border-radius: 8px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+<div class="form-card">
+    <h2>Create Your Professional Profile</h2>
+    <form id="profileForm" onsubmit="return validateProfileForm(event)">
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="e.g. Alex Morgan">
+            <div id="nameError" class="error">Full Name must contain at least 2 alphabetic characters.</div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="e.g. alex.morgan@example.com">
+            <div id="emailError" class="error">Please enter a valid email address containing '@' and a domain.</div>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="10-digit mobile number">
+            <div id="phoneError" class="error">Phone number must be exactly 10 numeric digits.</div>
+        </div>
+        <div class="form-group">
+            <label for="education">Education</label>
+            <select id="education">
+                <option value="">Select Qualification</option>
+                <option value="B.E / B.Tech">B.E / B.Tech</option>
+                <option value="M.E / M.Tech">M.E / M.Tech</option>
+                <option value="B.Sc">B.Sc</option>
+                <option value="M.Sc">M.Sc</option>
+                <option value="MCA">MCA</option>
+            </select>
+            <div id="educationError" class="error">Please select your education.</div>
+        </div>
+        <div class="form-group">
+            <label for="skills">Skills</label>
+            <input type="text" id="skills" placeholder="e.g. Java, Python, SQL, React">
+            <div id="skillsError" class="error">Please enter at least one skill.</div>
+        </div>
+        <div class="form-group">
+            <label for="careerGoal">Career Goal</label>
+            <input type="text" id="careerGoal" placeholder="e.g. Software Developer">
+            <div id="goalError" class="error">Career Goal is required.</div>
+        </div>
+        <div class="form-group">
+            <label for="experience">Experience</label>
+            <select id="experience">
+                <option value="Fresher">Fresher</option>
+                <option value="0 - 2 Years">0 - 2 Years</option>
+                <option value="2 - 5 Years">2 - 5 Years</option>
+                <option value="5+ Years">5+ Years</option>
+            </select>
+        </div>
+        <button type="submit" class="submit-btn">Save Profile</button>
+    </form>
+    <div id="successBox" class="success-box">
+        <strong>Your professional profile has been created successfully.</strong>
+    </div>
+</div>
+<script>
+function validateProfileForm(e) {
+    e.preventDefault();
+    let valid = true;
+    const name = document.getElementById('fullName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const edu = document.getElementById('education').value;
+    const skills = document.getElementById('skills').value.trim();
+    const goal = document.getElementById('careerGoal').value.trim();
+
+    const nameRegex = /^[A-Za-z\s.]{2,}$/;
+    if (!nameRegex.test(name)) { document.getElementById('nameError').style.display = 'block'; valid = false; }
+    else { document.getElementById('nameError').style.display = 'none'; }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) { document.getElementById('emailError').style.display = 'block'; valid = false; }
+    else { document.getElementById('emailError').style.display = 'none'; }
+
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(phone)) { document.getElementById('phoneError').style.display = 'block'; valid = false; }
+    else { document.getElementById('phoneError').style.display = 'none'; }
+
+    if (!edu) { document.getElementById('educationError').style.display = 'block'; valid = false; }
+    else { document.getElementById('educationError').style.display = 'none'; }
+
+    if (!skills) { document.getElementById('skillsError').style.display = 'block'; valid = false; }
+    else { document.getElementById('skillsError').style.display = 'none'; }
+
+    if (!goal) { document.getElementById('goalError').style.display = 'block'; valid = false; }
+    else { document.getElementById('goalError').style.display = 'none'; }
+
+    if (valid) {
+        document.getElementById('profileForm').style.display = 'none';
+        document.getElementById('successBox').style.display = 'block';
+    }
+    return false;
+}
+</script>
+</body>
+</html>

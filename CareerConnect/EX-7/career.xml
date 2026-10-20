@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="career.xsl"?>
+<careerConnect>
+    <profile>
+        <profileId>1001</profileId>
+        <name>Kalaiyarasan</name>
+        <email>kalaiyarasan@gmail.com</email>
+        <phone>9876543210</phone>
+        <education>B.E / B.Tech</education>
+        <skills>HTML, CSS, JavaScript, Java</skills>
+        <careerGoal>Software Developer</careerGoal>
+        <experience>Fresher</experience>
+    </profile>
+    <profile>
+        <profileId>1002</profileId>
+        <name>Arun Kumar</name>
+        <email>arun@gmail.com</email>
+        <phone>8765432109</phone>
+        <education>B.E / B.Tech</education>
+        <skills>Python, SQL, Machine Learning</skills>
+        <careerGoal>AI / ML Engineer</careerGoal>
+        <experience>Fresher</experience>
+    </profile>
+    <profile>
+        <profileId>1003</profileId>
+        <name>Priya</name>
+        <email>priya@gmail.com</email>
+        <phone>7654321098</phone>
+        <education>B.Sc</education>
+        <skills>Excel, SQL, Power BI</skills>
+        <careerGoal>Data Analyst</careerGoal>
+        <experience>0 - 2 Years</experience>
+    </profile>
+    <profile>
+        <profileId>1004</profileId>
+        <name>Vijay</name>
+        <email>vijay@gmail.com</email>
+        <phone>9543216780</phone>
+        <education>B.E / B.Tech</education>
+        <skills>Java, Spring, SQL</skills>
+        <careerGoal>Software Developer</careerGoal>
+        <experience>0 - 2 Years</experience>
+    </profile>
+    <profile>
+        <profileId>1005</profileId>
+        <name>Divya</name>
+        <email>divya@gmail.com</email>
+        <phone>8899776655</phone>
+        <education>M.Sc</education>
+        <skills>Python, Statistics, SQL</skills>
+        <careerGoal>Data Analyst</careerGoal>
+        <experience>Fresher</experience>
+    </profile>
+    <profile>
+        <profileId>1006</profileId>
+        <name>Karthik</name>
+        <email>karthik@gmail.com</email>
+        <phone>9988776655</phone>
+        <education>B.E / B.Tech</education>
+        <skills>Python, TensorFlow, AI</skills>
+        <careerGoal>AI / ML Engineer</careerGoal>
+        <experience>2 - 5 Years</experience>
+    </profile>
+    <profile>
+        <profileId>1007</profileId>
+        <name>Frehja</name>
+        <email>frehja@gmail.com</email>
+        <phone>9123456780</phone>
+        <education>B.E / B.Tech</education>
+        <skills>HTML, CSS, JavaScript</skills>
+        <careerGoal>Web Developer</careerGoal>
+        <experience>Fresher</experience>
+    </profile>
+    <profile>
+        <profileId>1008</profileId>
+        <name>Saul</name>
+        <email>saul@gmail.com</email>
+        <phone>9345678120</phone>
+        <education>M.E / M.Tech</education>
+        <skills>Java, Python, Cloud Computing</skills>
+        <careerGoal>Data Engineer</careerGoal>
+        <experience>2 - 5 Years</experience>
+    </profile>
+</careerConnect>

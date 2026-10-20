@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<careerConnect>
+    <!-- Invalid profile: profileId is not an integer, and required fields are missing -->
+    <profile>
+        <profileId>INVALID_ID_ABC</profileId>
+        <name>Sample Broken Record</name>
+        <!-- Missing email, phone, education, skills, careerGoal, experience -->
+    </profile>
+</careerConnect>

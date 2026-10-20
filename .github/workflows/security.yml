@@ -1,0 +1,54 @@
+name: Security
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    name: Dependency audit & secret scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Dependency audit
+        run: bun audit --audit-level=high
+        continue-on-error: true
+
+      - name: Fail if a .env file is committed
+        run: |
+          if git ls-files --error-unmatch .env >/dev/null 2>&1; then
+            echo "::error::.env must never be committed"; exit 1
+          fi
+          if git ls-files -- '.env.*' ':!:.env.example' | grep -q .; then
+            echo "::error::environment files must never be committed"; exit 1
+          fi
+          echo "no committed .env file"
+
+      # Matches only real credential *values*: a live key prefix followed by
+      # actual key characters. Source code that references a prefix (redaction
+      # regexes, `startsWith("sb_secret_")` guards) does not match, because the
+      # next character there is a quote or a regex bracket.
+      - name: Scan for hardcoded secret-like values
+        run: |
+          if grep -rInE "(sb_secret_[A-Za-z0-9]{20,}|service_role.{0,20}ey[A-Za-z0-9]{10,}|sk-[A-Za-z0-9]{20,})" \
+               --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=docs \
+               --exclude-dir=dist --exclude-dir=.output \
+               --exclude=.env.example . ; then
+            echo "::error::possible hardcoded secret found"; exit 1
+          fi
+          echo "no hardcoded secrets detected"

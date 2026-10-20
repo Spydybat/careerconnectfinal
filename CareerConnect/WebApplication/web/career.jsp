@@ -1,0 +1,102 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Career Connect - Exercise 6(A)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+body{min-height:100vh;background:linear-gradient(135deg,#e8f5e9,#e3f2fd);display:flex;justify-content:center;align-items:center;padding:20px}
+.container{width:850px;max-width:100%;background:white;border-radius:20px;overflow:hidden;display:flex;box-shadow:0 10px 30px rgba(0,0,0,0.12)}
+.left{width:40%;padding:45px 30px;color:white;background:linear-gradient(160deg,#238636,#176b2c)}
+.logo{width:60px;height:60px;background:white;color:#238636;border-radius:50%;display:grid;place-items:center;font-size:28px;font-weight:bold;margin-bottom:20px}
+h1{font-size:28px;margin-bottom:12px}
+.left p{line-height:1.6;font-size:14px;opacity:0.95}
+.right{width:60%;padding:40px}
+h2{font-size:26px;margin-bottom:8px;color:#1a202c}
+.subtitle{color:#666;margin-bottom:22px;font-size:14px}
+.group{margin-bottom:15px}
+label{display:block;font-size:13px;font-weight:bold;margin-bottom:6px;color:#333}
+input,select,textarea{width:100%;padding:11px;border:1px solid #ddd;border-radius:8px;font-size:14px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:#238636}
+textarea{resize:vertical;min-height:80px}
+.row{display:flex;gap:12px}
+.row .group{width:50%}
+.button{width:100%;padding:13px;border:0;border-radius:8px;background:#238636;color:white;font-size:16px;font-weight:bold;cursor:pointer;transition:background 0.2s}
+.button:hover{background:#176b2c}
+.note{text-align:center;color:#888;font-size:12px;margin-top:12px}
+@media(max-width:700px){.container{flex-direction:column}.left,.right{width:100%;padding:25px}.row{display:block}.row .group{width:100%}}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="left">
+<div class="logo">CC</div>
+<h1>Career Connect</h1>
+<p>Transform your career data into career intelligence. Create your professional profile and connect your skills with future opportunities.</p>
+</div>
+<div class="right">
+<h2>Create Career Profile</h2>
+<p class="subtitle">Enter your details to build your Career Connect profile (3-Tier JSP + JDBC).</p>
+<form action="career-result.jsp" method="post">
+<div class="group">
+<label>Full Name</label>
+<input type="text" name="name" placeholder="Enter your full name" required>
+</div>
+<div class="row">
+<div class="group">
+<label>Email Address</label>
+<input type="email" name="email" placeholder="Enter your email" required>
+</div>
+<div class="group">
+<label>Phone Number</label>
+<input type="text" name="phone" placeholder="10-digit number" maxlength="10" required>
+</div>
+</div>
+<div class="group">
+<label>Education</label>
+<select name="education" required>
+<option value="">Select Education</option>
+<option>B.E / B.Tech</option>
+<option>M.E / M.Tech</option>
+<option>B.Sc</option>
+<option>M.Sc</option>
+<option>MBA</option>
+</select>
+</div>
+<div class="group">
+<label>Skills</label>
+<input type="text" name="skills" placeholder="Example: HTML, CSS, JavaScript, Python" required>
+</div>
+<div class="group">
+<label>Career Goal</label>
+<select name="careerGoal" required>
+<option value="">Select Career Goal</option>
+<option>Software Developer</option>
+<option>Data Analyst</option>
+<option>Data Engineer</option>
+<option>AI / ML Engineer</option>
+<option>Web Developer</option>
+</select>
+</div>
+<div class="group">
+<label>Experience</label>
+<select name="experience" required>
+<option value="">Select Experience</option>
+<option>Fresher</option>
+<option>0 - 2 Years</option>
+<option>2 - 5 Years</option>
+<option>5+ Years</option>
+</select>
+</div>
+<div class="group">
+<label>Career Goals</label>
+<textarea name="goals" placeholder="Enter your career goals" required></textarea>
+</div>
+<input class="button" type="submit" value="Create Career Profile">
+</form>
+<p class="note">Your career information will be securely stored in the database.</p>
+</div>
+</div>
+</body>
+</html>

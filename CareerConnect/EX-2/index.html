@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Connect - Stylesheet Demonstration</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .internal-box { background: #e0f2fe; border: 2px solid #0284c7; padding: 16px; border-radius: 8px; margin-bottom: 16px; }
+        .internal-title { color: #0369a1; font-weight: bold; }
+    </style>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f8fafc; padding: 24px;">
+    <!-- Inline CSS -->
+    <div style="background-color: #f0fdf4; border: 2px solid #16a34a; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+        <h3 style="color: #15803d; margin-top: 0;">1. Inline CSS Demonstration</h3>
+        <p style="color: #166534; font-size: 14px;">Applied directly via the HTML style attribute with highest specificity.</p>
+    </div>
+    <!-- Internal CSS -->
+    <div class="internal-box">
+        <h3 class="internal-title">2. Internal CSS Demonstration</h3>
+        <p style="color: #0c4a6e; font-size: 14px;">Applied via the document &lt;head&gt; &lt;style&gt; block.</p>
+    </div>
+    <!-- External CSS -->
+    <div class="external-card">
+        <h3 class="external-title">3. External CSS Demonstration</h3>
+        <p class="external-text">Loaded from an independent stylesheet file (style.css).</p>
+    </div>
+</body>
+</html>

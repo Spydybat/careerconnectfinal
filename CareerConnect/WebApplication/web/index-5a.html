@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Career Connect - Exercise 5(A)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        margin: 0;
+        background-color: #eaf6ff;
+        color: #111111;
+        padding: 20px;
+      }
+      .header {
+        background-color: #238636;
+        color: white;
+        text-align: center;
+        padding: 25px;
+        border-radius: 12px 12px 0 0;
+        max-width: 520px;
+        margin: 20px auto 0;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 26px;
+      }
+      .header p {
+        margin: 6px 0 0;
+        font-size: 14px;
+        opacity: 0.9;
+      }
+      .container {
+        max-width: 520px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 35px;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+      }
+      h2 {
+        text-align: center;
+        color: #238636;
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-size: 22px;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin: 15px 0 6px 0;
+        font-size: 14px;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 15px;
+      }
+      input:focus,
+      select:focus {
+        outline: none;
+        border-color: #238636;
+      }
+      input[type="submit"] {
+        background-color: #238636;
+        color: white;
+        border: none;
+        margin-top: 25px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.2s;
+      }
+      input[type="submit"]:hover {
+        background-color: #176b2c;
+      }
+      footer {
+        text-align: center;
+        margin-top: 30px;
+        color: #666;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>CAREER CONNECT</h1>
+      <p>AI Career Intelligence Platform</p>
+    </div>
+    <div class="container">
+      <h2>Career Profile Registration</h2>
+      <form action="CareerServlet" method="post">
+        <label>Full Name:</label>
+        <input type="text" name="name" placeholder="Enter your full name" required />
+
+        <label>Email Address:</label>
+        <input type="email" name="email" placeholder="Enter your email" required />
+
+        <label>Phone Number:</label>
+        <input type="text" name="phone" placeholder="10-digit number" maxlength="10" required />
+
+        <label>Education:</label>
+        <select name="education" required>
+          <option value="">Select Education</option>
+          <option>B.E / B.Tech</option>
+          <option>M.E / M.Tech</option>
+          <option>B.Sc</option>
+          <option>M.Sc</option>
+          <option>MBA</option>
+        </select>
+
+        <label>Skills:</label>
+        <input type="text" name="skills" placeholder="Example: Java, Python, SQL" required />
+
+        <label>Career Goal:</label>
+        <select name="careerGoal" required>
+          <option value="">Select Career Goal</option>
+          <option>Software Developer</option>
+          <option>Data Analyst</option>
+          <option>Data Engineer</option>
+          <option>AI / ML Engineer</option>
+          <option>Web Developer</option>
+        </select>
+
+        <label>Experience:</label>
+        <select name="experience" required>
+          <option value="">Select Experience</option>
+          <option>Fresher</option>
+          <option>0 - 2 Years</option>
+          <option>2 - 5 Years</option>
+          <option>5+ Years</option>
+        </select>
+
+        <input type="submit" value="Create Career Profile" />
+      </form>
+    </div>
+    <footer>&copy; 2026 Career Connect - Career Intelligence Platform</footer>
+  </body>
+</html>

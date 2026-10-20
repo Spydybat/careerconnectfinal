@@ -1,0 +1,2108 @@
+EX.NO.1 - CREATE A WEB PAGE USING HTML TO EMBED AN IMAGE MAP, FIX THE HOTSPOTS, AND DISPLAY RELATED INFORMATION WHEN THE HOTSPOTS ARE CLICKED
+
+PROGRAM
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Connect - Image Map</title>
+</head>
+<body bgcolor="#d6d6d6" text="#111111">
+<center>
+    <h1>CAREER CONNECT</h1>
+    <p>
+        Connecting people, skills, opportunities and career intelligence
+        through one global platform.
+    </p>
+    <br>
+    <img src="career-connect.png"
+         width="950"
+         height="650"
+         alt="Career Connect"
+         usemap="#careerconnect">
+    <map name="careerconnect">
+        <area shape="rect"
+              coords="60,120,300,300"
+              href="#profile"
+              alt="Profile">
+        <area shape="rect"
+              coords="600,120,840,300"
+              href="#jobs"
+              alt="Jobs">
+        <area shape="rect"
+              coords="60,330,300,510"
+              href="#skills"
+              alt="Skills">
+        <area shape="rect"
+              coords="600,330,840,510"
+              href="#analytics"
+              alt="Analytics">
+    </map>
+    <p>
+        Click the hotspots to explore Career Connect.
+    </p>
+</center>
+<br>
+<hr color="#38a852">
+<a name="profile"></a>
+<h2>PROFILE</h2>
+<p>
+    Career Connect brings education, experience, projects, skills,
+    certifications and career goals into one professional profile.
+</p>
+<h3>Profile Areas</h3>
+<ul>
+    <li>
+        <b>Personal Information:</b>
+        Professional identity and basic career information.
+    </li>
+    <li>
+        <b>Education:</b>
+        Academic qualifications and educational background.
+    </li>
+    <li>
+        <b>Experience:</b>
+        Internships, employment and professional experience.
+    </li>
+    <li>
+        <b>Projects:</b>
+        Academic and professional projects.
+    </li>
+    <li>
+        <b>Skills:</b>
+        Technical and professional capabilities.
+    </li>
+    <li>
+        <b>Certifications:</b>
+        Professional certifications and credentials.
+    </li>
+    <li>
+        <b>Career Goals:</b>
+        Target careers, industries and career preferences.
+    </li>
+</ul>
+<br>
+<hr color="#38a852">
+<a name="skills"></a>
+<h2>SKILLS</h2>
+<p>
+    Career Connect analyzes skills to show current strengths,
+    identify skill gaps and suggest skills needed for future careers.
+</p>
+<h3>Skill Intelligence</h3>
+<ul>
+    <li>
+        <b>Technical Skills:</b>
+        Analyze programming, cloud, AI and technology skills.
+    </li>
+    <li>
+        <b>Professional Skills:</b>
+        Evaluate communication, leadership and problem-solving skills.
+    </li>
+    <li>
+        <b>Skill Demand:</b>
+        Identify skills currently required by the job market.
+    </li>
+    <li>
+        <b>Skill Gap:</b>
+        Compare current skills with target career requirements.
+    </li>
+    <li>
+        <b>Emerging Skills:</b>
+        Identify rapidly growing technologies and future skills.
+    </li>
+</ul>
+<br>
+<hr color="#38a852">
+<a name="jobs"></a>
+<h2>JOBS</h2>
+<p>
+    Career Connect helps users find relevant opportunities based on
+    skills, careers, companies, locations and job preferences.
+</p>
+<h3>Job Intelligence</h3>
+<ul>
+    <li>
+        <b>Job Discovery:</b>
+        Explore opportunities across different industries.
+    </li>
+    <li>
+        <b>Skill Matching:</b>
+        Compare required job skills with available skills.
+    </li>
+    <li>
+        <b>Career Matching:</b>
+        Connect career goals with suitable job roles.
+    </li>
+    <li>
+        <b>Company Intelligence:</b>
+        Explore companies and their hiring opportunities.
+    </li>
+    <li>
+        <b>Location Intelligence:</b>
+        Discover opportunities across cities and countries.
+    </li>
+</ul>
+<br>
+<hr color="#38a852">
+<a name="analytics"></a>
+<h2>ANALYTICS</h2>
+<p>
+    Career Connect transforms career data into useful intelligence
+    about jobs, skills, salaries, hiring, learning and placement trends.
+</p>
+<h3>Analytics Areas</h3>
+<ul>
+    <li>
+        <b>Career Analytics:</b>
+        Career demand, growth and opportunity trends.
+    </li>
+    <li>
+        <b>Skill Analytics:</b>
+        Skill demand, skill gaps and emerging technologies.
+    </li>
+    <li>
+        <b>Salary Intelligence:</b>
+        Salary ranges and salary trends.
+    </li>
+    <li>
+        <b>Job Market Analytics:</b>
+        Job growth, role demand and technology demand.
+    </li>
+    <li>
+        <b>Hiring Analytics:</b>
+        Applications, interviews, offers and hiring trends.
+    </li>
+    <li>
+        <b>Placement Analytics:</b>
+        Placement rates, salaries and company hiring.
+    </li>
+    <li>
+        <b>Learning Analytics:</b>
+        Learning progress, completion and career readiness.
+    </li>
+</ul>
+<br><br>
+<hr color="#38a852">
+<center>
+    <h2>CAREER CONNECT</h2>
+    <p>
+        Transforming Career Data Into Career Intelligence
+    </p>
+</center>
+</body>
+</html>
+
+EX.NO.2 - CREATE A WEB PAGE WITH ALL TYPES OF CASCADING STYLE SHEETS - 9943 - KALAIYARASAN K
+
+PROGRAM - HTML
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Career Connect - Exercise 2</title> 
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+<section class="hero"> 
+    <div class="top-label"> 
+        AI CAREER INTELLIGENCE PLATFORM 
+    </div> 
+    <h1 class="hero-title"> 
+        CAREER CONNECT 
+    </h1> 
+    <p class="hero-subtitle"> 
+        Connecting people, skills, opportunities and career intelligence 
+        through one global platform. 
+    </p> 
+    <div class="hero-line"></div> 
+</section> 
+<center> 
+    <div class="map-container"> 
+        <div class="map-glow"></div> 
+        <img src="career-connect.png" 
+             width="900" 
+             height="600" 
+             alt="Career Connect" 
+             class="career-image"> 
+    </div> 
+    <p class="instruction"> 
+        Click the hotspots to explore Career Connect. 
+    </p> 
+</center> 
+<section class="content-section" id="profile"> 
+    <div class="section-number"> 
+        01 
+    </div> 
+    <h2 class="section-title"> 
+        PROFILE 
+    </h2> 
+    <p class="description"> 
+        Career Connect brings education, experience, projects, skills, certifications and career goals into one professional profile. 
+    </p> 
+    <div class="table-card"> 
+        <table> 
+            <tr> 
+                <th>Profile Area</th> 
+                <th>Information</th> 
+            </tr> 
+            <tr> 
+                <td>Personal Information</td> 
+                <td>Professional identity and basic career information</td> 
+            </tr> 
+            <tr> 
+                <td>Education</td> 
+                <td>Academic qualifications and educational background</td> 
+            </tr> 
+            <tr> 
+                <td>Experience</td> 
+                <td>Internships, employment and professional experience</td> 
+            </tr> 
+            <tr> 
+                <td>Projects</td> 
+                <td>Academic and professional projects</td> 
+            </tr> 
+            <tr> 
+                <td>Skills</td> 
+                <td>Technical and professional capabilities</td> 
+            </tr> 
+            <tr> 
+                <td>Certifications</td> 
+                <td>Professional certifications and credentials</td> 
+            </tr> 
+            <tr> 
+                <td>Career Goals</td> 
+                <td>Target careers, industries and career preferences</td> 
+            </tr> 
+        </table> 
+    </div> 
+</section> 
+<section class="content-section" id="skills"> 
+    <div class="section-number"> 
+        02 
+    </div> 
+    <h2 class="section-title"> 
+        SKILLS 
+    </h2> 
+    <p class="description"> 
+        Career Connect analyzes skills to show current strengths, identify skill gaps and suggest skills needed for future careers. 
+    </p> 
+    <div class="table-card"> 
+        <table> 
+            <tr> 
+                <th>Skill Intelligence</th> 
+                <th>Purpose</th> 
+            </tr> 
+            <tr> 
+                <td>Technical Skills</td> 
+                <td>Analyze programming, cloud, AI and technology skills</td> 
+            </tr> 
+            <tr> 
+                <td>Professional Skills</td> 
+                <td>Evaluate communication, leadership and problem-solving skills</td> 
+            </tr> 
+            <tr> 
+                <td>Skill Demand</td> 
+                <td>Identify skills currently required by the job market</td> 
+            </tr> 
+            <tr> 
+                <td>Skill Gap</td> 
+                <td>Compare current skills with target career requirements</td> 
+            </tr> 
+            <tr> 
+                <td>Emerging Skills</td> 
+                <td>Identify rapidly growing technologies and future skills</td> 
+            </tr> 
+        </table> 
+    </div> 
+</section> 
+<section class="content-section" id="jobs"> 
+    <div class="section-number"> 
+        03 
+    </div> 
+    <h2 class="section-title"> 
+        JOBS 
+    </h2> 
+    <p class="description"> 
+        Career Connect helps users find relevant opportunities based on skills, careers, companies, locations and job preferences. 
+    </p> 
+    <div class="table-card"> 
+        <table> 
+            <tr> 
+                <th>Job Intelligence</th> 
+                <th>Purpose</th> 
+            </tr> 
+            <tr> 
+                <td>Job Discovery</td> 
+                <td>Explore opportunities across different industries</td> 
+            </tr> 
+            <tr> 
+                <td>Skill Matching</td> 
+                <td>Compare required job skills with available skills</td> 
+            </tr> 
+            <tr> 
+                <td>Career Matching</td> 
+                <td>Connect career goals with suitable job roles</td> 
+            </tr> 
+            <tr> 
+                <td>Company Intelligence</td> 
+                <td>Explore companies and their hiring opportunities</td> 
+            </tr> 
+            <tr> 
+                <td>Location Intelligence</td> 
+                <td>Discover opportunities across cities and countries</td> 
+            </tr> 
+        </table> 
+    </div> 
+</section> 
+<section class="content-section" id="analytics"> 
+    <div class="section-number"> 
+        04 
+    </div> 
+    <h2 class="section-title"> 
+        ANALYTICS 
+    </h2> 
+    <p class="description"> 
+        Career Connect transforms career data into useful intelligence about jobs, skills, salaries, hiring, learning and placement trends. 
+    </p> 
+    <div class="table-card"> 
+        <table> 
+            <tr> 
+                <th>Analytics Area</th> 
+                <th>Information Provided</th> 
+            </tr> 
+            <tr> 
+                <td>Career Analytics</td> 
+                <td>Career demand, growth and opportunity trends</td> 
+            </tr> 
+            <tr> 
+                <td>Skill Analytics</td> 
+                <td>Skill demand, skill gaps and emerging technologies</td> 
+            </tr> 
+            <tr> 
+                <td>Salary Intelligence</td> 
+                <td>Salary ranges and salary trends</td> 
+            </tr> 
+            <tr> 
+                <td>Job Market Analytics</td> 
+                <td>Job growth, role demand and technology demand</td> 
+            </tr> 
+            <tr> 
+                <td>Hiring Analytics</td> 
+                <td>Applications, interviews, offers and hiring trends</td> 
+            </tr> 
+            <tr> 
+                <td>Placement Analytics</td> 
+                <td>Placement rates, salaries and company hiring</td> 
+            </tr> 
+            <tr> 
+                <td>Learning Analytics</td> 
+                <td>Learning progress, completion and career readiness</td> 
+            </tr> 
+        </table> 
+    </div> 
+</section> 
+<footer> 
+    <div class="footer-logo"> 
+        CAREER CONNECT 
+    </div> 
+    <p> 
+        Transforming Career Data Into Career Intelligence 
+    </p> 
+</footer> 
+</body> 
+</html>
+
+
+
+
+
+
+
+PROGRAM - CSS
+
+* { 
+    box-sizing: border-box; 
+} 
+body { 
+    margin: 0; 
+    min-height: 100vh; 
+    background: radial-gradient(circle at 20% 10%, #1b99f3, #83ade8 35%, #1e74e6); 
+    color: black; 
+    font-family: Arial, sans-serif; 
+} 
+.top-label { 
+    display: inline-block; 
+    padding: 8px 18px; 
+    border: 1px solid #31536a; 
+    border-radius: 30px; 
+    font-size: 11px; 
+    letter-spacing: 2px; 
+    background: rgba(255, 255, 255, 0.7); 
+} 
+.hero { 
+    text-align: center; 
+    padding: 40px; 
+} 
+.hero-title { 
+    color: black; 
+    font-size: 48px; 
+    letter-spacing: 5px; 
+    text-shadow: 0 0 25px rgba(66, 216, 121, 0.35); 
+} 
+.hero-subtitle { 
+    color: black; 
+    font-size: 16px; 
+} 
+.hero-line { 
+    width: 120px; 
+    height: 3px; 
+    margin: 25px auto; 
+    background: #04180c; 
+    box-shadow: 0 0 20px rgba(66, 216, 121, 0.8); 
+} 
+.map-container { 
+    position: relative; 
+    width: 900px; 
+    max-width: 90%; 
+} 
+.map-glow { 
+    position: absolute; 
+    width: 80%; 
+    height: 70%; 
+    left: 10%; 
+    top: 15%; 
+    background: #42d879; 
+    filter: blur(100px); 
+    opacity: 0.08; 
+    z-index: -1; 
+} 
+.career-image { 
+    max-width: 100%; 
+    height: auto; 
+    border: 1px solid #31536a; 
+    border-radius: 22px; 
+    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.55); 
+} 
+.instruction { 
+    color: black; 
+    font-size: 11px; 
+    letter-spacing: 3px; 
+    margin-top: 25px; 
+} 
+.content-section { 
+    width: 90%; 
+    max-width: 1150px; 
+    margin: 100px auto; 
+    padding: 45px; 
+    position: relative; 
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)); 
+    border: 1px solid #263f52; 
+    border-radius: 20px; 
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45); 
+} 
+.section-number { 
+    position: absolute; 
+    right: 35px; 
+    top: 30px; 
+    font-size: 50px; 
+    font-weight: bold; 
+} 
+.section-title { 
+    color: #000000; 
+    letter-spacing: 2px; 
+} 
+.description { 
+    color: black; 
+    line-height: 1.8; 
+} 
+.table-card { 
+    overflow-x: auto; 
+    border-radius: 12px; 
+} 
+table { 
+    width: 90%; 
+    min-width: 600px; 
+    margin: 20px auto; 
+    border-collapse: collapse; 
+    background: #ffffff; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45); 
+} 
+th { 
+    padding: 15px; 
+    background: #173047; 
+    color: #42d879; 
+} 
+td { 
+    padding: 14px; 
+    color: black; 
+    border: 1px solid #263d51; 
+} 
+tr:hover { 
+    background: #ffffff; 
+}  
+footer { 
+    text-align: center; 
+    padding: 70px 20px; 
+    margin-top: 100px; 
+    background: linear-gradient(#201b1bd6, #0066ff); 
+    border-top: 1px solid #4397d7; 
+} 
+.footer-logo { 
+    color: #42d879; 
+    font-size: 22px; 
+    font-weight: bold; 
+    letter-spacing: 4px; 
+} 
+footer p { 
+    color: rgb(255, 255, 255); 
+    font-size: 12px; 
+    letter-spacing: 3px; 
+} 
+@media (max-width: 700px) { 
+    .hero-title { 
+        font-size: 32px; 
+    } 
+    .content-section { 
+        width: 94%; 
+        padding: 25px; 
+    } 
+    .career-image { 
+        width: 100%; 
+    } 
+    table { 
+        width: 100%; 
+    } 
+}
+
+
+EX.NO.3 - CLIENT SIDE SCRIPTS FOR VALIDATING WEB FORM CONTROLS USING DHTML
+
+PROGRAM - HTML & CSS
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Connect - Exercise 3</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: white;
+            color: black;
+        }
+        .hero {
+            text-align: center;
+            padding: 45px 20px;
+            background: #f2f2f2;
+        }
+        .top-label {
+            color: #238636;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+        .hero-title {
+            font-size: 45px;
+            margin: 15px 0 10px;
+        }
+        .hero-subtitle {
+            font-size: 18px;
+            color: #444;
+        }
+        .hero-line {
+            width: 100px;
+            height: 3px;
+            background: #238636;
+            margin: 25px auto;
+        }
+        .form-container {
+            width: 80%;
+            max-width: 750px;
+            margin: 40px auto;
+            padding: 35px;
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 5px 25px #cccccc;
+        }
+        .section-title {
+            font-size: 30px;
+            margin-top: 8px;
+        }
+        .description {
+            color: #555;
+            line-height: 1.6;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            border: 1px solid #999;
+            border-radius: 8px;
+            background: white;
+            color: black;
+            font-size: 15px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #238636;
+        }
+        .error {
+            display: block;
+            color: red;
+            font-size: 13px;
+            margin-top: 6px;
+        }
+        .success {
+            color: #238636;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .submit-button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #238636;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .submit-button:hover {
+            background: #176b2c;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            background: #f2f2f2;
+            color: black;
+        }
+        .footer-logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<section class="hero">
+    <div class="top-label">
+        AI CAREER INTELLIGENCE PLATFORM
+    </div>
+    <h1 class="hero-title">
+        CAREER CONNECT
+    </h1>
+    <p class="hero-subtitle">
+        Connecting people, skills, opportunities and career intelligence
+        through one global platform.
+    </p>
+    <div class="hero-line"></div>
+</section>
+<section class="form-container">
+    <h2 class="section-title">
+        CAREER PROFILE REGISTRATION
+    </h2>
+    <p class="description">
+        Create your Career Connect professional profile by entering
+        your personal information, education, skills and career goals.
+    </p>
+    <form id="careerForm" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="name">
+                Full Name
+            </label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                oninput="this.value = this.value.replace(/[^A-Za-z ]/g, '')"
+            >
+            <span id="nameError" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="email">
+                Email Address
+            </label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+            >
+            <span id="emailError" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="phone">
+                Phone Number
+            </label>
+            <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="Enter 10 digit phone number"
+                maxlength="10"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+            >
+            <span id="phoneError" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="education">
+                Education
+            </label>
+            <select id="education" name="education">
+                <option value="">
+                    Select Education
+                </option>
+                <option value="BE">
+                    B.E / B.Tech
+                </option>
+                <option value="ME">
+                    M.E / M.Tech
+                </option>
+                <option value="BSC">
+                    B.Sc
+                </option>
+                <option value="MSC">
+                    M.Sc
+                </option>
+                <option value="MBA">
+                    MBA
+                </option>
+            </select>
+            <span id="educationError" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="skills">
+                Skills
+            </label>
+            <input
+                type="text"
+                id="skills"
+                name="skills"
+                placeholder="Example: HTML, CSS, JavaScript, Python"
+            >
+            <span id="skillsError" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="careerGoal">
+                Career Goal
+            </label>
+            <select id="careerGoal" name="careerGoal">
+                <option value="">
+                    Select Career Goal
+                </option>
+                <option value="software">
+                    Software Developer
+                </option>
+                <option value="data">
+                    Data Analyst
+                </option>
+                <option value="dataengineer">
+                    Data Engineer
+                </option>
+                <option value="ai">
+                    AI / ML Engineer
+                </option>
+                <option value="web">
+                    Web Developer
+                </option>
+            </select>
+            <span id="careerGoalError" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="experience">
+                Experience
+            </label>
+            <select id="experience" name="experience">
+                <option value="">
+                    Select Experience
+                </option>
+                <option value="fresher">
+                    Fresher
+                </option>
+                <option value="0-2">
+                    0 - 2 Years
+                </option>
+                <option value="2-5">
+                    2 - 5 Years
+                </option>
+                <option value="5+">
+                    5+ Years
+                </option>
+            </select>
+            <span id="experienceError" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label for="goals">
+                Career Goals
+            </label>
+            <textarea
+                id="goals"
+                name="goals"
+                placeholder="Enter your career goals"
+            ></textarea>
+            <span id="goalsError" class="error"></span>
+        </div>
+        <button type="submit" class="submit-button">
+            Create Career Profile
+        </button>
+        <div id="successMessage" class="success"></div>
+    </form>
+</section>
+<footer>
+    <div class="footer-logo">
+        CAREER CONNECT
+    </div>
+    <p>
+        Transforming Career Data Into Career Intelligence
+    </p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PROGRAM - JAVASCRIPT
+function validateForm(){
+let valid=true;
+let name=document.getElementById("name").value.trim();
+let email=document.getElementById("email").value.trim();
+let phone=document.getElementById("phone").value.trim();
+let education=document.getElementById("education").value;
+let skills=document.getElementById("skills").value.trim();
+let careerGoal=document.getElementById("careerGoal").value;
+let experience=document.getElementById("experience").value;
+let goals=document.getElementById("goals").value.trim();
+document.getElementById("nameError").innerHTML="";
+document.getElementById("emailError").innerHTML="";
+document.getElementById("phoneError").innerHTML="";
+document.getElementById("educationError").innerHTML="";
+document.getElementById("skillsError").innerHTML="";
+document.getElementById("careerGoalError").innerHTML="";
+document.getElementById("experienceError").innerHTML="";
+document.getElementById("goalsError").innerHTML="";
+document.getElementById("successMessage").innerHTML="";
+if(name===""){
+document.getElementById("nameError").innerHTML="Please enter your full name.";
+valid=false;
+}
+if(email===""){
+document.getElementById("emailError").innerHTML="Please enter your email address.";
+valid=false;
+}else if(!email.includes("@")){
+document.getElementById("emailError").innerHTML="Please enter a valid email address.";
+valid=false;
+}
+if(phone===""){
+document.getElementById("phoneError").innerHTML="Please enter your phone number.";
+valid=false;
+}else if(phone.length!==10){
+document.getElementById("phoneError").innerHTML="Phone number must contain 10 digits.";
+valid=false;
+}
+if(education===""){
+document.getElementById("educationError").innerHTML="Please select your education.";
+valid=false;
+}
+if(skills===""){
+document.getElementById("skillsError").innerHTML="Please enter your skills.";
+valid=false;
+}
+if(careerGoal===""){
+document.getElementById("careerGoalError").innerHTML="Please select your career goal.";
+valid=false;
+}
+if(experience===""){
+document.getElementById("experienceError").innerHTML="Please select your experience.";
+valid=false;
+}
+if(goals===""){
+document.getElementById("goalsError").innerHTML="Please enter your career goals.";
+valid=false;
+}
+if(valid){
+document.getElementById("successMessage").innerHTML="Career Profile Created Successfully!";
+}
+return false;
+}
+
+EX.NO.4 - INSTALLATION OF APACHE TOMCAT WEBSERVER
+
+PROCEDURE
+
+STEP 1: Visit the Apache Tomcat Website
+ Open a web browser and go to the official Apache Tomcat website. Download the appropriate Windows Installer (.exe) for the required Tomcat version.
+
+
+
+
+
+
+STEP 2: Launch the Installer
+Locate the downloaded Tomcat .exe file and open it. The Apache Tomcat Setup Wizard will be displayed. Click Next to proceed.
+
+
+STEP 3: Accept the License Agreement
+The license agreement will be shown on the screen. Review the terms and select I Agree to proceed with the installation. 
+
+STEP 4: Select the Required Components
+The installer will display the Choose Components screen. Select the necessary components for Tomcat and click Next.
+ 
+STEP 5: Configure Tomcat
+In the configuration screen, specify the HTTP connector port, usually 8080. Enter an administrator username and password for accessing Tomcat management applications, then click Next.
+
+
+STEP 6: Proceed with the Installation
+The installer will begin installing the required components. Allow the installation process to complete and click Close when the installation window indicates completion.
+
+STEP 7: Specify the JDK Location
+When the Java Virtual Machine (JVM) path is requested, browse to the location where the JDK is installed on the system. Select the appropriate JDK folder and click Next.
+
+STEP 8: Finish the Setup
+ After all installation files have been configured, the Apache Tomcat Setup Wizard Completed screen will appear. Click Finish to exit the installer.
+
+STEP 9: Verify Tomcat Through Localhost
+ Open a web browser and enter http://localhost:8080 in the address bar. If Tomcat is running correctly, the Apache Tomcat welcome page will be displayed.
+
+STEP 10: Open the Management Application
+ From the Tomcat welcome page, select Host Manager or Manager App. Provide the administrator credentials created during the configuration process to sign in.
+ 
+STEP 11: Access Tomcat Web Application Manager
+ After successful authentication, the Tomcat Web Application Manager will open. It provides options to deploy, start, stop, reload, and manage web applications.
+
+
+EX.NO.5(A) - TO INVOKE SERVLETS FROM HTML FORMS
+
+PROGRAM - INDEX.HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Connect - Exercise 5(A)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            margin: 0;
+            background-color: #eaf6ff;
+            color: #111111;
+        }
+        .header {
+            background-color: #238636;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+        .container {
+            width: 500px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px gray;
+        }
+        h2 {
+            text-align: center;
+            color: #238636;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 15px 0 6px 0;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #238636;
+        }
+        input[type="submit"] {
+            background-color: #238636;
+            color: white;
+            border: none;
+            margin-top: 25px;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: #176b2c;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>CAREER CONNECT</h1>
+    <p>AI Career Intelligence Platform</p>
+</div>
+<div class="container">
+    <h2>Career Profile Registration</h2>
+    <form action="CareerServlet" method="post">
+        <label>Full Name:</label>
+        <input type="text" name="name" required>
+        <label>Email Address:</label>
+        <input type="email" name="email" required>
+        <label>Phone Number:</label>
+        <input type="text" name="phone" maxlength="10" required>
+        <label>Education:</label>
+        <select name="education" required>
+            <option value="">Select Education</option>
+            <option>B.E / B.Tech</option>
+            <option>M.E / M.Tech</option>
+            <option>B.Sc</option>
+            <option>M.Sc</option>
+            <option>MBA</option>
+        </select>
+        <label>Skills:</label>
+        <input type="text" name="skills" placeholder="Example: Java, Python, SQL" required>
+        <label>Career Goal:</label>
+        <select name="careerGoal" required>
+            <option value="">Select Career Goal</option>
+            <option>Software Developer</option>
+            <option>Data Analyst</option>
+            <option>Data Engineer</option>
+            <option>AI / ML Engineer</option>
+            <option>Web Developer</option>
+        </select>
+        <label>Experience:</label>
+        <select name="experience" required>
+            <option value="">Select Experience</option>
+            <option>Fresher</option>
+            <option>0 - 2 Years</option>
+            <option>2 - 5 Years</option>
+            <option>5+ Years</option>
+        </select>
+        <input type="submit" value="Create Career Profile">
+    </form> 
+</div>
+<footer>
+	© 2026 Career Connect - Career Intelligence Platform
+</footer>
+</body>
+</html>
+ 
+PROGRAM - WEB.XML
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>CareerServlet</servlet-name>
+        <servlet-class>CareerServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>CareerServlet</servlet-name>
+        <url-pattern>/CareerServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
+ 
+PROGRAM - CAREERSERVLET.JAVA 
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+public class CareerServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request,
+                      	HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String phone = request.getParameter("phone");
+        String education = request.getParameter("education");
+        String skills = request.getParameter("skills");
+        String careerGoal = request.getParameter("careerGoal");
+        String experience = request.getParameter("experience");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>Career Connect Profile</title>");
+        out.println("<style>");
+        out.println("body{font-family:Arial;background:#eaf6ff;margin:0;}");
+        out.println(".header{background:#238636;color:white;text-align:center;padding:25px;}");
+out.println(".container{width:600px;margin:50pxauto;background:white; padding:35px;border-radius:12px;box-shadow:0 5px 15px gray;}");
+        out.println("h1{text-align:center;color:#238636;}");
+        out.println("h2{color:#238636;text-align:center;}");
+        out.println("p{font-size:17px;padding:8px;border-bottom:1px solid #ddd;}");
+        out.println("b{color:#238636;}");
+        out.println(".success{text-align:center;color:#238636;font-weight:bold;font-size:20px;}");
+        out.println("</style>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<div class='header'>");
+        out.println("<h1>CAREER CONNECT</h1>");
+        out.println("<p>AI Career Intelligence Platform</p>");
+        out.println("</div>");
+        out.println("<div class='container'>");
+        out.println("<h2>Career Profile Created Successfully!</h2>");
+        out.println("<p class='success'>Welcome to Career Connect</p>");
+        out.println("<h2>Profile Details</h2>");
+        out.println("<p><b>Full Name:</b> " + name + "</p>");
+        out.println("<p><b>Email Address:</b> " + email + "</p>");
+        out.println("<p><b>Phone Number:</b> " + phone + "</p>");
+        out.println("<p><b>Education:</b> " + education + "</p>");
+        out.println("<p><b>Skills:</b> " + skills + "</p>");
+        out.println("<p><b>Career Goal:</b> " + careerGoal + "</p>");
+        out.println("<p><b>Experience:</b> " + experience + "</p>");
+        out.println("<h2>Career Intelligence</h2>");
+        out.println("<p><b>Profile Status:</b> Active</p>");
+        out.println("<p><b>Career Goal:</b> " + careerGoal + "</p>");
+        out.println("<p><b>Skill Analysis:</b> Skills successfully recorded</p>");
+        out.println("</div>");
+        out.println("</body>");
+        out.println("</html>");
+	}
+}
+
+
+EX.NO.5(B) - SESSION TRACKING USING SERVLETS
+
+PROGRAM - INDEX.HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Connect - Session Tracking</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0px 5px 25px #cccccc;
+            width: 450px;
+        }
+        h1 {
+            color: #238636;
+            font-size: 28px;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #999;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            outline: none;
+            border-color: #238636;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #238636;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #176b2c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CAREER CONNECT</h1>
+        <p class="subtitle">
+            AI Career Intelligence Platform
+        </p>
+        <form action="SessionTrackingServlet" method="post">
+            <label>Full Name</label>
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter your full name"
+                required >
+
+            <label>Email Address</label>
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter your email address"
+                required>
+            <label>Career Goal</label>
+            <input
+                type="text"
+                name="careerGoal"
+                placeholder="Example: Software Developer"
+                required>
+            <input
+                type="submit"
+                value="Start Career Session">
+        </form>
+    </div>
+</body>
+</html>
+
+PROGRAM - WEB.XML
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <servlet>
+        <servlet-name>SessionTrackingServlet</servlet-name>
+        <servlet-class>SessionTrackingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionTrackingServlet</servlet-name>
+        <url-pattern>/SessionTrackingServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
+
+
+
+
+
+
+PROGRAM - SESSIONTRACKINGSERVLET.JAVA
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+public class SessionTrackingServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String careerGoal = request.getParameter("careerGoal");
+        HttpSession session = request.getSession();
+        session.setAttribute("name", name);
+        session.setAttribute("email", email);
+        session.setAttribute("careerGoal", careerGoal);
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>Career Connect Session</title>");
+        out.println("<style>");
+        out.println(
+            "body {" +
+            "font-family: Arial, sans-serif;" +
+            "background: #f2f2f2;" +
+            "display: flex;" +
+            "justify-content: center;" +
+            "align-items: center;" +
+            "min-height: 100vh;" +
+            "margin: 0;" +
+            "}"
+        );
+        out.println(
+            ".container {" +
+            "background: white;" +
+            "padding: 40px;" +
+            "border-radius: 18px;" +
+            "box-shadow: 0 5px 25px #cccccc;" +
+            "width: 500px;" +
+            "}"
+        );
+        out.println(
+            "h1 {" +
+            "color: #238636;" +
+            "text-align: center;" +
+            "}"
+        );
+
+        out.println(
+            "h2 {" +
+            "color: #333;" +
+            "}"
+        );
+        out.println(
+            "p {" +
+            "font-size: 16px;" +
+            "line-height: 1.8;" +
+            "}"
+        );
+        out.println(
+            ".session {" +
+            "background: #eaf7ed;" +
+            "padding: 15px;" +
+            "border-radius: 8px;" +
+            "margin-top: 20px;" +
+            "}"
+        );
+        out.println("</style>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<div class='container'>");
+        out.println("<h1>CAREER CONNECT</h1>");
+        out.println("<h2>Career Session Started Successfully</h2>");
+        out.println("<p><b>Name:</b> " + name + "</p>");
+        out.println("<p><b>Email:</b> " + email + "</p>");
+        out.println("<p><b>Career Goal:</b> " + careerGoal + "</p>");
+        out.println("<div class='session'>");
+        out.println(
+            "<p><b>Session ID:</b> " +
+            session.getId() +
+            "</p>"
+        );
+        out.println(
+            "<p>Your career session is successfully maintained using HttpSession.</p>"
+        );
+        out.println("</div>");
+        out.println("</div>");
+        out.println("</body>");
+        out.println("</html>");
+    }
+}
+
+
+EX.NO.6(A) - THREE TIER APPLICATION USING JSP AND DATABASE 
+
+PROGRAM - CAREER.JSP
+
+<%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Career Connect</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial}
+body{min-height:100vh;background:linear-gradient(135deg,#e8f5e9,#e3f2fd);display:flex;justify-content:center;align-items:center;padding:20px}
+.container{width:850px;background:white;border-radius:20px;overflow:hidden;display:flex;box-shadow:0 10px 30px #0002}
+.left{width:40%;padding:45px 30px;color:white;background:linear-gradient(160deg,#238636,#176b2c)}
+.logo{width:60px;height:60px;background:white;color:#238636;border-radius:50%;display:grid;place-items:center;font-size:28px;font-weight:bold;margin-bottom:20px}
+h1{font-size:28px;margin-bottom:12px}
+.left p{line-height:1.6}
+.right{width:60%;padding:40px}
+h2{font-size:27px;margin-bottom:8px}
+.subtitle{color:#777;margin-bottom:22px}
+.group{margin-bottom:15px}
+label{display:block;font-size:14px;font-weight:bold;margin-bottom:6px;color:#444}
+input,select,textarea{width:100%;padding:11px;border:1px solid #ddd;border-radius:8px;font-size:14px}
+textarea{resize:vertical;min-height:80px}
+.row{display:flex;gap:12px}
+.row .group{width:50%}
+.button{width:100%;padding:13px;border:0;border-radius:8px;background:#238636;color:white;font-size:16px;font-weight:bold;cursor:pointer}
+.button:hover{background:#176b2c}
+.note{text-align:center;color:#888;font-size:11px;margin-top:12px}
+@media(max-width:700px){.container{flex-direction:column}.left,.right{width:100%;padding:30px}.row{display:block}.row .group{width:100%}}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="left">
+<div class="logo">CC</div>
+<h1>Career Connect</h1>
+<p>Transform your career data into career intelligence. Create your professional profile and connect your skills with future opportunities.</p>
+</div>
+<div class="right">
+<h2>Create Career Profile</h2>
+<p class="subtitle">Enter your details to build your Career Connect profile.</p>
+<form action="career-result.jsp" method="post">
+<div class="group">
+<label>Full Name</label>
+<input type="text" name="name" placeholder="Enter your full name" required>
+</div>
+<div class="row">
+<div class="group">
+<label>Email Address</label>
+<input type="email" name="email" placeholder="Enter your email" required>
+</div>
+<div class="group">
+<label>Phone Number</label>
+<input type="text" name="phone" placeholder="10-digit number" maxlength="10" required>
+</div>
+</div>
+<div class="group">
+<label>Education</label>
+<select name="education" required>
+<option value="">Select Education</option>
+<option>B.E / B.Tech</option>
+<option>M.E / M.Tech</option>
+<option>B.Sc</option>
+<option>M.Sc</option>
+<option>MBA</option>
+</select>
+</div>
+<div class="group">
+<label>Skills</label>
+<input type="text" name="skills" placeholder="Example: HTML, CSS, JavaScript, Python" required>
+</div>
+<div class="group">
+<label>Career Goal</label>
+<select name="careerGoal" required>
+<option value="">Select Career Goal</option>
+<option>Software Developer</option>
+<option>Data Analyst</option>
+<option>Data Engineer</option>
+<option>AI / ML Engineer</option>
+<option>Web Developer</option>
+</select>
+</div>
+<div class="group">
+<label>Experience</label>
+<select name="experience" required>
+<option value="">Select Experience</option>
+<option>Fresher</option>
+<option>0 - 2 Years</option>
+<option>2 - 5 Years</option>
+<option>5+ Years</option>
+</select>
+</div>
+<div class="group">
+<label>Career Goals</label>
+<textarea name="goals" placeholder="Enter your career goals" required></textarea>
+</div>
+<input class="button" type="submit" value="Create Career Profile">
+</form>
+<p class="note">Your career information will be securely stored.</p>
+</div>
+</div>
+</body>
+</html>
+
+
+PROGRAM - CAREER-RESULT.JSP
+
+<%@ page import="java.sql.*" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Career Profile Confirmation</title>
+<style>
+*{box-sizing:border-box;font-family:Arial}
+body{margin:0;min-height:100vh;background:linear-gradient(135deg,#e8f5e9,#e3f2fd);display:flex;justify-content:center;align-items:center}
+.card{width:550px;max-width:90%;background:#fff;padding:35px;border-radius:20px;box-shadow:0 15px 40px #0002;text-align:center}
+.success{width:65px;height:65px;margin:auto auto 15px;border-radius:50%;background:#20c997;color:#fff;font-size:38px;display:grid;place-items:center}
+h1{color:#238636;margin:10px}
+.message{color:#666;margin-bottom:20px}
+.details{text-align:left;background:#f7f9fc;padding:15px;border-radius:10px}
+.details p{margin:10px 0;color:#444}
+.home{display:inline-block;margin-top:20px;padding:12px 22px;background:#238636;color:#fff;text-decoration:none;border-radius:8px}
+</style>
+</head>
+<body>
+<%
+String name=request.getParameter("name");
+String email=request.getParameter("email");
+String phone=request.getParameter("phone");
+String education=request.getParameter("education");
+String skills=request.getParameter("skills");
+String careerGoal=request.getParameter("careerGoal");
+String experience=request.getParameter("experience");
+String goals=request.getParameter("goals");
+
+String url="jdbc:sqlserver://103.207.1.91:1433;databaseName=CSE9596;encrypt=true;trustServerCertificate=true";
+String username="MZ",password="mzcet@1234";
+
+Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+Connection con=DriverManager.getConnection(url,username,password);
+
+PreparedStatement ps=con.prepareStatement("INSERT INTO CareerProfiles(name,email,phone,education,skills,careerGoal,experience,goals) VALUES(?,?,?,?,?,?,?,?)");
+ps.setString(1,name);
+ps.setString(2,email);
+ps.setString(3,phone);
+ps.setString(4,education);
+ps.setString(5,skills);
+ps.setString(6,careerGoal);
+ps.setString(7,experience);
+ps.setString(8,goals);
+ps.executeUpdate();
+
+ps.close();
+con.close();
+%>
+<div class="card">
+<div class="success">✓</div>
+<h1>Career Profile Created</h1>
+<p class="message">Your Career Connect profile has been successfully saved.</p>
+<div class="details">
+<p><b>Full Name:</b> <%=name%></p>
+<p><b>Email:</b> <%=email%></p>
+<p><b>Phone Number:</b> <%=phone%></p>
+<p><b>Education:</b> <%=education%></p>
+<p><b>Skills:</b> <%=skills%></p>
+<p><b>Career Goal:</b> <%=careerGoal%></p>
+<p><b>Experience:</b> <%=experience%></p>
+<p><b>Career Goals:</b> <%=goals%></p>
+</div>
+<a class="home" href="career.jsp">Create Another Profile</a>
+</div>
+</body>
+</html>
+
+PROGRAM - WEB.XML
+
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+</web-app>
+
+QUERY - SQL SERVER QUERY
+
+USE CSE9943;
+
+CREATE TABLE CareerProfiles (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    education VARCHAR(100) NOT NULL,
+    skills VARCHAR(500) NOT NULL,
+    careerGoal VARCHAR(100) NOT NULL,
+    experience VARCHAR(50) NOT NULL,
+    goals VARCHAR(500) NOT NULL
+);
+
+SELECT * FROM CareerProfiles;
+
+
+
+
+EX.NO.6(B) - THREE TIER APPLICATION USING JSP AND DATABASE
+ DISPLAYING CAREER PROFILE DETAILS
+
+PROGRAM - PROFILE.JSP
+
+<%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Career Connect</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial}
+body{min-height:100vh;background:linear-gradient(135deg,#e8f5e9,#e3f2fd);display:flex;justify-content:center;align-items:center;padding:20px}
+.container{width:900px;max-width:100%;background:#fff;border-radius:20px;overflow:hidden;display:flex;box-shadow:0 10px 30px #0002}
+.left{width:40%;padding:40px 30px;color:#fff;background:linear-gradient(160deg,#238636,#176b2c)}
+.logo{width:65px;height:65px;background:#fff;color:#238636;border-radius:50%;display:grid;place-items:center;font-size:25px;font-weight:bold;margin-bottom:20px}
+h1{font-size:28px;margin-bottom:12px}
+.left>p{line-height:1.6}
+.features{margin-top:20px}
+.features p{margin:10px 0;font-size:14px}
+.right{width:60%;padding:35px 40px}
+h2{font-size:27px;margin-bottom:6px}
+.subtitle{color:#777;margin-bottom:20px}
+.group{margin-bottom:13px}
+label{display:block;font-size:13px;font-weight:bold;color:#444;margin-bottom:5px}
+input,select,textarea{width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-size:14px;outline:0}
+textarea{resize:vertical;min-height:70px}
+input:focus,select:focus,textarea:focus{border-color:#238636}
+.row{display:flex;gap:12px}
+.row .group{width:50%}
+.button{width:100%;padding:12px;border:0;border-radius:8px;background:#238636;color:#fff;font-size:16px;font-weight:bold;cursor:pointer}
+.button:hover{background:#176b2c}
+.note{text-align:center;color:#888;font-size:11px;margin-top:10px}
+@media(max-width:700px){.container{flex-direction:column}.left,.right{width:100%;padding:30px}.row{display:block}.row .group{width:100%}}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="left">
+<div class="logo">CC</div>
+<h1>Career Connect</h1>
+<p>Transform your career data into career intelligence and discover opportunities based on your skills, education and career goals.</p>
+<div class="features">
+<p>♡ Smart Career Profiles</p>
+<p>✦ Skill-Based Opportunities</p>
+<p>◉ Career Intelligence</p>
+<p>★ Professional Growth</p>
+<p>✓ Secure Profile Storage</p>
+</div>
+</div>
+<div class="right">
+<h2>Career Profile</h2>
+<p class="subtitle">Enter your details to create your professional profile.</p>
+<form action="CareerServlet" method="post">
+<div class="group">
+<label>Full Name</label>
+<input type="text" name="name" placeholder="Enter your full name" required>
+</div>
+<div class="row">
+<div class="group">
+<label>Email Address</label>
+<input type="email" name="email" placeholder="Enter your email" required>
+</div>
+<div class="group">
+<label>Phone Number</label>
+<input type="text" name="phone" placeholder="Enter phone number" maxlength="10" required>
+</div>
+</div>
+<div class="group">
+<label>Education</label>
+<select name="education" required>
+<option value="">Select Education</option>
+<option>B.E / B.Tech</option>
+<option>M.E / M.Tech</option>
+<option>B.Sc</option>
+<option>M.Sc</option>
+<option>MBA</option>
+</select>
+</div>
+<div class="group">
+<label>Skills</label>
+<input type="text" name="skills" placeholder="Example: HTML, CSS, JavaScript, Python" required>
+</div>
+<div class="group">
+<label>Career Goal</label>
+<select name="careerGoal" required>
+<option value="">Select Career Goal</option>
+<option>Software Developer</option>
+<option>Data Analyst</option>
+<option>Data Engineer</option>
+<option>AI / ML Engineer</option>
+<option>Web Developer</option>
+</select>
+</div>
+<div class="group">
+<label>Experience</label>
+<select name="experience" required>
+<option value="">Select Experience</option>
+<option>Fresher</option>
+<option>0 - 2 Years</option>
+<option>2 - 5 Years</option>
+<option>5+ Years</option>
+</select>
+</div>
+<div class="group">
+<label>Career Goals</label>
+<textarea name="goals" placeholder="Enter your career goals" required></textarea>
+</div>
+<input class="button" type="submit" value="Create Career Profile">
+</form>
+<p class="note">Your information will be securely stored.</p>
+</div>
+</div>
+</body>
+</html>
+
+PROGRAM - CAREER PROFILE.JAVA
+
+public class CareerProfile {
+    private String name,email,phone,education,skills,careerGoal,experience,goals;
+
+    public CareerProfile(String name,String email,String phone,String education,String skills,String careerGoal,String experience,String goals){
+        this.name=name;
+        this.email=email;
+        this.phone=phone;
+        this.education=education;
+        this.skills=skills;
+        this.careerGoal=careerGoal;
+        this.experience=experience;
+        this.goals=goals;
+    }
+    public String getName(){return name;}
+    public String getEmail(){return email;}
+    public String getPhone(){return phone;}
+    public String getEducation(){return education;}
+    public String getSkills(){return skills;}
+    public String getCareerGoal(){return careerGoal;}
+    public String getExperience(){return experience;}
+    public String getGoals(){return goals;}
+}
+
+PROGRAM - CAREER PROFILE DAO.JAVA
+
+import java.sql.*;
+public class CareerProfileDAO {
+    private String url="jdbc:sqlserver://103.207.1.91:1433;databaseName=CSE9596;encrypt=true;trustServerCertificate=true";
+    private String username="MZ",password="mzcet@1234";
+    public boolean saveProfile(CareerProfile p){
+        String sql="INSERT INTO CareerProfiles(name,email,phone,education,skills,careerGoal,experience,goals) VALUES(?,?,?,?,?,?,?,?)";
+        try{
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            Connection con=DriverManager.getConnection(url,username,password);
+            PreparedStatement ps=con.prepareStatement(sql);
+            ps.setString(1,p.getName());
+            ps.setString(2,p.getEmail());
+            ps.setString(3,p.getPhone());
+            ps.setString(4,p.getEducation());
+            ps.setString(5,p.getSkills());
+            ps.setString(6,p.getCareerGoal());
+            ps.setString(7,p.getExperience());
+            ps.setString(8,p.getGoals());
+            int result=ps.executeUpdate();
+
+            ps.close();
+            con.close();
+            return result>0;
+        }catch(Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+}
+
+PROGRAM - CAREER SERVLET.JAVA
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+public class CareerServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException{
+        request.setCharacterEncoding("UTF-8");
+        String name=request.getParameter("name");
+        String email=request.getParameter("email");
+        String phone=request.getParameter("phone");
+        String education=request.getParameter("education");
+        String skills=request.getParameter("skills");
+        String careerGoal=request.getParameter("careerGoal");
+        String experience=request.getParameter("experience");
+        String goals=request.getParameter("goals");
+        CareerProfile profile=new CareerProfile(name,email,phone,education,skills,careerGoal,experience,goals);
+        CareerProfileDAO dao=new CareerProfileDAO();
+        boolean success=dao.saveProfile(profile);
+        if(success){
+            request.setAttribute("name",name);
+            request.setAttribute("email",email);
+            request.setAttribute("phone",phone);
+            request.setAttribute("education",education);
+            request.setAttribute("skills",skills);
+            request.setAttribute("careerGoal",careerGoal);
+            request.setAttribute("experience",experience);
+            request.setAttribute("goals",goals);
+            RequestDispatcher rd=request.getRequestDispatcher("/profile-result.jsp");
+            rd.forward(request,response);
+        }else{
+            response.setContentType("text/html;charset=UTF-8");
+            PrintWriter out=response.getWriter();
+            out.println("<h2>Career Profile Creation Failed</h2>");
+            out.println("<p>Database insertion failed.</p>");
+        }
+    }
+}
+
+PROFILE - CAREER RESULT.JSP
+
+<%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Career Profile</title>
+<style>
+*{box-sizing:border-box;font-family:Arial}
+body{margin:0;min-height:100vh;background:linear-gradient(135deg,#e8f5e9,#e3f2fd);display:flex;justify-content:center;align-items:center}
+.card{width:600px;max-width:90%;background:#fff;padding:35px;border-radius:20px;box-shadow:0 15px 40px #0002;text-align:center}
+.success{width:65px;height:65px;margin:auto auto 15px;border-radius:50%;background:#20c997;color:#fff;font-size:38px;display:grid;place-items:center}
+h1{color:#238636;margin:10px}
+.message{color:#666;margin-bottom:20px}
+.details{text-align:left;background:#f7f9fc;padding:15px;border-radius:10px}
+.details p{margin:10px 0;color:#444}
+.home{display:inline-block;margin-top:20px;padding:12px 22px;background:#238636;color:#fff;text-decoration:none;border-radius:8px}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="success">✓</div>
+<h1>Career Profile Created</h1>
+<p class="message">Your Career Connect profile has been successfully stored in the database.</p>
+<div class="details">
+<p><b>Full Name:</b> <%=request.getAttribute("name")%></p>
+<p><b>Email:</b> <%=request.getAttribute("email")%></p>
+<p><b>Phone Number:</b> <%=request.getAttribute("phone")%></p>
+<p><b>Education:</b> <%=request.getAttribute("education")%></p>
+<p><b>Skills:</b> <%=request.getAttribute("skills")%></p>
+<p><b>Career Goal:</b> <%=request.getAttribute("careerGoal")%></p>
+<p><b>Experience:</b> <%=request.getAttribute("experience")%></p>
+<p><b>Career Goals:</b> <%=request.getAttribute("goals")%></p>
+</div>
+<a class="home" href="profile.jsp">Create Another Profile</a>
+</div>
+</body>
+</html>
+
+PROGRAM - WEB.XML
+
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <servlet-name>CareerServlet</servlet-name>
+        <servlet-class>CareerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CareerServlet</servlet-name>
+        <url-pattern>/CareerServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
+
+
+QUERY - SQL SERVER QUERY
+
+USE CSE9943;
+
+CREATE TABLE CareerProfiles (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    education VARCHAR(100) NOT NULL,
+    skills VARCHAR(500) NOT NULL,
+    careerGoal VARCHAR(100) NOT NULL,
+    experience VARCHAR(50) NOT NULL,
+    goals VARCHAR(500) NOT NULL
+);
+
+SELECT * FROM CareerProfiles;
+
+
+EX.NO.7 - VALIDATION AND DISPLAY OF XML DOCUMENT USING XSD AND XSL
+
+PROGRAM - CAREER.XML
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="career.xsl"?>
+<careerConnect>
+    <profile>
+        <profileId>1001</profileId>
+        <name>Kalaiyarasan</name>
+        <email>kalaiyarasan@gmail.com</email>
+        <phone>9876543210</phone>
+        <education>B.E / B.Tech</education>
+        <skills>HTML, CSS, JavaScript, Java</skills>
+        <careerGoal>Software Developer</careerGoal>
+        <experience>Fresher</experience>
+    </profile>
+    <profile>
+        <profileId>1002</profileId>
+        <name>Arun Kumar</name>
+        <email>arun@gmail.com</email>
+        <phone>8765432109</phone>
+        <education>B.E / B.Tech</education>
+        <skills>Python, SQL, Machine Learning</skills>
+        <careerGoal>AI / ML Engineer</careerGoal>
+        <experience>Fresher</experience>
+    </profile>
+    <profile>
+        <profileId>1003</profileId>
+        <name>Priya</name>
+        <email>priya@gmail.com</email>
+        <phone>7654321098</phone>
+        <education>B.Sc</education>
+        <skills>Excel, SQL, Power BI</skills>
+        <careerGoal>Data Analyst</careerGoal>
+        <experience>0 - 2 Years</experience>
+    </profile>
+    <profile>
+        <profileId>1004</profileId>
+        <name>Vijay</name>
+        <email>vijay@gmail.com</email>
+        <phone>9543216780</phone>
+        <education>B.E / B.Tech</education>
+        <skills>Java, Spring, SQL</skills>
+        <careerGoal>Software Developer</careerGoal>
+        <experience>0 - 2 Years</experience>
+    </profile>
+    <profile>
+        <profileId>1005</profileId>
+        <name>Divya</name>
+        <email>divya@gmail.com</email>
+        <phone>8899776655</phone>
+        <education>M.Sc</education>
+        <skills>Python, Statistics, SQL</skills>
+        <careerGoal>Data Analyst</careerGoal>
+        <experience>Fresher</experience>
+    </profile>
+    <profile>
+        <profileId>1006</profileId>
+        <name>Karthik</name>
+        <email>karthik@gmail.com</email>
+        <phone>9988776655</phone>
+        <education>B.E / B.Tech</education>
+        <skills>Python, TensorFlow, AI</skills>
+        <careerGoal>AI / ML Engineer</careerGoal>
+        <experience>2 - 5 Years</experience>
+    </profile>
+    <profile>
+        <profileId>1007</profileId>
+        <name>Frehja</name>
+        <email>frehja@gmail.com</email>
+        <phone>9123456780</phone>
+        <education>B.E / B.Tech</education>
+        <skills>HTML, CSS, JavaScript</skills>
+        <careerGoal>Web Developer</careerGoal>
+        <experience>Fresher</experience>
+    </profile>
+    <profile>
+        <profileId>1008</profileId>
+        <name>Saul</name>
+        <email>saul@gmail.com</email>
+        <phone>9345678120</phone>
+        <education>M.E / M.Tech</education>
+        <skills>Java, Python, Cloud Computing</skills>
+        <careerGoal>Data Engineer</careerGoal>
+        <experience>2 - 5 Years</experience>
+    </profile>
+</careerConnect>
+ 
+PROGRAM - CAREER.XSL 
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:template match="/">
+    <html>
+    <head>
+        <title>Career Connect</title>
+        <style>
+            body {
+                font-family: Arial;
+                background: #e8f5e9;
+                text-align: center;
+                margin: 0;
+                padding: 30px;
+            }
+            h1 {
+                color: #238636;
+                margin-bottom: 8px;
+            }
+            h2 {
+                color: #333;
+                margin-bottom: 25px;
+            }
+            table {
+                margin: auto;
+                border-collapse: collapse;
+                width: 95%;
+                background: white;
+                box-shadow: 0 10px 25px #0002;
+            }
+            th {
+                background: #238636;
+                color: white;
+                padding: 12px;
+            }
+            td {
+                border: 1px solid #999;
+                padding: 10px;
+                color: #333;
+            }
+            tr:nth-child(even) {
+                background: #f7f9fc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CAREER CONNECT</h1>
+        <h2>Career Profile Details</h2>
+        <table>
+            <tr>
+                <th>Profile ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Education</th>
+                <th>Skills</th>
+                <th>Career Goal</th>
+                <th>Experience</th>
+            </tr>
+            <xsl:for-each select="careerConnect/profile">
+            <tr>
+                <td><xsl:value-of select="profileId"/></td>
+                <td><xsl:value-of select="name"/></td>
+                <td><xsl:value-of select="email"/></td>
+                <td><xsl:value-of select="phone"/></td>
+                <td><xsl:value-of select="education"/></td>
+                <td><xsl:value-of select="skills"/></td>
+                <td><xsl:value-of select="careerGoal"/></td>
+                <td><xsl:value-of select="experience"/></td>
+            </tr>
+            </xsl:for-each>
+        </table>
+    </body>
+    </html>
+    </xsl:template>
+</xsl:stylesheet>
+ 
+PROGRAM - CAREER.XSD
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="careerConnect">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="profile" maxOccurs="unbounded">
+                	<xs:complexType>
+                    	<xs:sequence>
+                        	<xs:element name="profileId" type="xs:integer"/>
+                        	<xs:element name="name" type="xs:string"/>
+                        	<xs:element name="email" type="xs:string"/>
+                        	<xs:element name="phone" type="xs:string"/>
+                        	<xs:element name="education" type="xs:string"/>
+                        	<xs:element name="skills" type="xs:string"/>
+                        	<xs:element name="careerGoal" type="xs:string"/>
+                        	<xs:element name="experience" type="xs:string"/>
+                    	</xs:sequence>
+                	</xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+ 

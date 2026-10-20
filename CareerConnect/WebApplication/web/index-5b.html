@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Career Connect - Session Tracking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        background-color: white;
+        padding: 40px;
+        border-radius: 18px;
+        box-shadow: 0px 5px 25px #cccccc;
+        max-width: 450px;
+        width: 100%;
+      }
+      h1 {
+        color: #238636;
+        font-size: 28px;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      .subtitle {
+        text-align: center;
+        color: #555;
+        margin-bottom: 30px;
+        font-size: 14px;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #333;
+        font-size: 14px;
+      }
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #999;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+      input[type="text"]:focus,
+      input[type="email"]:focus {
+        outline: none;
+        border-color: #238636;
+      }
+      input[type="submit"] {
+        width: 100%;
+        background-color: #238636;
+        color: white;
+        padding: 14px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+      input[type="submit"]:hover {
+        background-color: #176b2c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CAREER CONNECT</h1>
+      <p class="subtitle">AI Career Intelligence Platform — Exercise 5(B)</p>
+      <form action="SessionTrackingServlet" method="post">
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="Enter your full name" required />
+
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="Enter your email address" required />
+
+        <label>Career Goal</label>
+        <input type="text" name="careerGoal" placeholder="Example: Software Developer" required />
+
+        <input type="submit" value="Start Career Session" />
+      </form>
+    </div>
+  </body>
+</html>

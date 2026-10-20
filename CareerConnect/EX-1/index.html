@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Connect - Career Ecosystem Map</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f3f2ef; color: #111; margin: 0; padding: 24px; text-align: center; }
+        .card { background: white; max-width: 980px; margin: 0 auto; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 24px; }
+        h1 { color: #0a66c2; margin-bottom: 8px; }
+        img { max-width: 100%; height: auto; border-radius: 8px; }
+        .section { text-align: left; margin-top: 32px; padding: 16px; border-left: 4px solid #0a66c2; background: #f8fafc; border-radius: 4px; }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>CAREER CONNECT</h1>
+    <p>Build Your Professional Future — Connecting people, skills, opportunities and career intelligence.</p>
+    <img src="career-connect.png" width="950" height="650" alt="Career Connect Ecosystem" usemap="#careerconnect">
+    <map name="careerconnect">
+        <area shape="rect" coords="60,120,300,300" href="#profile" alt="Profile">
+        <area shape="rect" coords="600,120,840,300" href="#jobs" alt="Jobs">
+        <area shape="rect" coords="60,330,300,510" href="#skills" alt="Skills">
+        <area shape="rect" coords="600,330,840,510" href="#analytics" alt="Analytics">
+    </map>
+    <p><em>Click any quadrant to navigate to the corresponding domain.</em></p>
+    <div id="profile" class="section"><h2>Profile Domain</h2><p>Candidate profiles with verified skills, qualifications, and goals.</p></div>
+    <div id="jobs" class="section"><h2>Opportunities Domain</h2><p>Active job opportunities, career paths, and corporate matching.</p></div>
+    <div id="skills" class="section"><h2>Skills Domain</h2><p>Technical, professional, and emerging competencies analysis.</p></div>
+    <div id="analytics" class="section"><h2>Insights Domain</h2><p>Placement trends, market demand, and salary benchmarks.</p></div>
+</div>
+</body>
+</html>
