@@ -1,6 +1,6 @@
 import { createFileRoute, Outlet, redirect } from "@tanstack/react-router";
 import { AppShell } from "@/components/app-shell";
-import { getApiUrl } from "@/lib/api-config";
+import { getApiUrl, isBackendConfigured } from "@/lib/api-config";
 
 export const Route = createFileRoute("/_authenticated")({
   ssr: false,
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/_authenticated")({
     }
 
     // 2. Authoritative check via AuthServlet session endpoint
-    if (typeof fetch !== "undefined") {
+    if (typeof fetch !== "undefined" && isBackendConfigured()) {
       try {
         const res = await fetch(getApiUrl("/AuthServlet?action=session"), { credentials: "include" });
         if (res.ok) {

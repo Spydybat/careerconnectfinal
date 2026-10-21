@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { getApiBaseUrl } from "@/lib/api-config";
+import { getApiBaseUrl, isLocalEnvironment } from "@/lib/api-config";
 import {
   UserRound,
   Mail,
@@ -108,23 +108,41 @@ function ProfileCreationPage() {
   const fetchCareerServlet = async (pathAndQuery: string, init?: RequestInit): Promise<Response> => {
     const cleanPath = pathAndQuery.startsWith("/") ? pathAndQuery : `/${pathAndQuery}`;
     const customBase = getApiBaseUrl();
-    const candidates = [
-      ...(customBase ? [`${customBase}${cleanPath}`] : []),
-      cleanPath,
-      `http://localhost:8085${cleanPath}`,
-      `http://127.0.0.1:8085${cleanPath}`,
-    ];
+    const isLocal = isLocalEnvironment();
+
+    const candidates: string[] = [];
+    if (customBase) {
+      candidates.push(`${customBase}${cleanPath}`);
+    }
+    if (isLocal) {
+      candidates.push(cleanPath);
+      candidates.push(`http://localhost:8085${cleanPath}`);
+      candidates.push(`http://127.0.0.1:8085${cleanPath}`);
+    } else if (!customBase) {
+      candidates.push(cleanPath);
+    }
 
     let lastError: Error | null = null;
     for (const url of candidates) {
       try {
         const res = await fetch(url, init);
+        if (res.status === 404 && !isLocal && !customBase) {
+          throw new Error(
+            "Career Connect backend is not connected. In production, configure VITE_BACKEND_URL in Vercel to point to your deployed Tomcat backend."
+          );
+        }
         if (res.status === 200 || res.status === 400 || res.status === 404 || res.status === 500) {
           return res;
         }
       } catch (err) {
         lastError = err instanceof Error ? err : new Error(String(err));
       }
+    }
+
+    if (!isLocal && !customBase) {
+      throw new Error(
+        "Backend service URL is not configured. Set VITE_BACKEND_URL in Vercel to point to your deployed Java Tomcat backend."
+      );
     }
 
     throw lastError || new Error("Failed to connect to backend CareerServlet.");

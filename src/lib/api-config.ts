@@ -9,6 +9,16 @@
  * 3. Direct localhost fallback when running locally without a reverse proxy
  */
 
+export function isLocalEnvironment(): boolean {
+  if (typeof window === "undefined") return false;
+  const host = window.location.hostname;
+  return host === "localhost" || host === "127.0.0.1" || host === "0.0.0.0";
+}
+
+export function isBackendConfigured(): boolean {
+  return Boolean(getApiBaseUrl()) || isLocalEnvironment();
+}
+
 export function getApiBaseUrl(): string {
   const envUrl = (
     (typeof import.meta !== "undefined" &&

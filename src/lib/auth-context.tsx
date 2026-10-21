@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from "react";
-import { getApiBaseUrl } from "@/lib/api-config";
+import { getApiBaseUrl, isLocalEnvironment } from "@/lib/api-config";
 
 export interface AuthUser {
   id: number;
@@ -45,19 +45,26 @@ const STORAGE_KEY = "career_connect_auth_user";
  * Resilient multi-endpoint fetcher to communicate with AuthServlet.
  * Order of resolution:
  * 1. Configured Backend URL (`VITE_BACKEND_URL` / `VITE_API_URL`) if deployed separately
- * 2. Same-Origin Relative Proxy (`/AuthServlet`) — routed via Vite dev server proxy to Tomcat on port 8085
- * 3. Direct localhost:8085 (`http://localhost:8085/AuthServlet`)
- * 4. Direct 127.0.0.1:8085 (`http://127.0.0.1:8085/AuthServlet`)
+ * 2. In local development: Same-Origin Relative Proxy (`/AuthServlet`) or direct local Tomcat ports (8085)
+ * 3. In production: Direct to configured cloud backend
  */
 async function fetchAuthServlet(pathAndQuery: string, init?: RequestInit): Promise<Response> {
   const cleanPath = pathAndQuery.startsWith("/") ? pathAndQuery : `/${pathAndQuery}`;
   const customBase = getApiBaseUrl();
-  const endpoints = [
-    ...(customBase ? [`${customBase}${cleanPath}`] : []),
-    cleanPath,
-    `http://localhost:8085${cleanPath}`,
-    `http://127.0.0.1:8085${cleanPath}`,
-  ];
+  const isLocal = isLocalEnvironment();
+
+  const endpoints: string[] = [];
+  if (customBase) {
+    endpoints.push(`${customBase}${cleanPath}`);
+  }
+  if (isLocal) {
+    endpoints.push(cleanPath);
+    endpoints.push(`http://localhost:8085${cleanPath}`);
+    endpoints.push(`http://127.0.0.1:8085${cleanPath}`);
+  } else if (!customBase) {
+    // When running in production on Vercel without VITE_BACKEND_URL, try relative URL
+    endpoints.push(cleanPath);
+  }
 
   let lastError: Error | null = null;
   for (const url of endpoints) {
@@ -66,12 +73,40 @@ async function fetchAuthServlet(pathAndQuery: string, init?: RequestInit): Promi
         ...init,
         credentials: "include", // Required to pass and receive HTTP session cookies
       });
-      if (res.status === 200 || res.status === 400 || res.status === 401 || res.status === 403 || res.status === 404 || res.status === 429) {
+
+      // If in production without a backend URL and Vercel returns 404
+      if (res.status === 404 && !isLocal && !customBase) {
+        throw new Error(
+          "Career Connect Java backend is not connected. In production, configure VITE_BACKEND_URL in Vercel to point to your deployed Tomcat backend."
+        );
+      }
+
+      // Valid API responses from AuthServlet
+      if (
+        res.status === 200 ||
+        res.status === 400 ||
+        res.status === 401 ||
+        res.status === 403 ||
+        res.status === 429
+      ) {
         return res;
       }
+
+      // In local dev, if an endpoint returns 404, try next fallback
+      if (res.status === 404 && isLocal) {
+        continue;
+      }
+
+      return res;
     } catch (err) {
       lastError = err instanceof Error ? err : new Error(String(err));
     }
+  }
+
+  if (!isLocal && !customBase) {
+    throw new Error(
+      "Backend service URL is not configured. Set VITE_BACKEND_URL in Vercel to point to your deployed Java Tomcat backend."
+    );
   }
 
   throw lastError || new Error("Unable to connect to Career Connect Authentication Gateway.");
