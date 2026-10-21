@@ -19,17 +19,23 @@ public class UserAccountDAO {
     private static final String DEFAULT_URL = 
         System.getenv("DB_URL") != null 
             ? System.getenv("DB_URL") 
-            : "jdbc:sqlserver://103.207.1.91:1433;databaseName=CSE9596;encrypt=true;trustServerCertificate=true";
+            : (System.getenv("JDBC_URL") != null 
+                ? System.getenv("JDBC_URL") 
+                : "jdbc:sqlserver://103.207.1.91:1433;databaseName=CSE9596;encrypt=true;trustServerCertificate=true");
 
     private static final String DEFAULT_USER = 
         System.getenv("DB_USER") != null 
             ? System.getenv("DB_USER") 
-            : "MZ";
+            : (System.getenv("DATABASE_USER") != null 
+                ? System.getenv("DATABASE_USER") 
+                : "MZ");
 
     private static final String DEFAULT_PASS = 
         System.getenv("DB_PASSWORD") != null 
             ? System.getenv("DB_PASSWORD") 
-            : "mzcet@1234";
+            : (System.getenv("DATABASE_PASSWORD") != null 
+                ? System.getenv("DATABASE_PASSWORD") 
+                : "mzcet@1234");
 
     private static final int PBKDF2_ITERATIONS = 65536;
     private static final int KEY_LENGTH_BITS = 256;
