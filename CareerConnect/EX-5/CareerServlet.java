@@ -14,23 +14,44 @@ import javax.servlet.http.*;
 public class CareerServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    private void applyCors(HttpServletResponse response) {
-        response.setHeader("Access-Control-Allow-Origin", "*");
+    private static final java.util.Set<String> ALLOWED_ORIGINS = new java.util.HashSet<>(java.util.Arrays.asList(
+        "https://careerconnectfinal.vercel.app",
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "http://localhost:8080",
+        "http://localhost:8085",
+        "http://127.0.0.1:5173",
+        "http://127.0.0.1:3000",
+        "http://127.0.0.1:8080",
+        "http://127.0.0.1:8085"
+    ));
+
+    private void applyCors(HttpServletRequest request, HttpServletResponse response) {
+        String origin = request.getHeader("Origin");
+        if (origin != null && !origin.trim().isEmpty()) {
+            String norm = origin.trim().replaceAll("/+$", "");
+            if (ALLOWED_ORIGINS.contains(norm) || (norm.startsWith("https://careerconnectfinal-") && norm.endsWith(".vercel.app"))) {
+                response.setHeader("Access-Control-Allow-Origin", norm);
+                response.setHeader("Access-Control-Allow-Credentials", "true");
+                response.setHeader("Vary", "Origin");
+            }
+        }
         response.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-        response.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With, Accept");
+        response.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With, Accept, Origin");
+        response.setHeader("Access-Control-Max-Age", "86400");
     }
 
     @Override
     protected void doOptions(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        applyCors(response);
+        applyCors(request, response);
         response.setStatus(HttpServletResponse.SC_OK);
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        applyCors(response);
+        applyCors(request, response);
 
         CareerProfileDAO dao = new CareerProfileDAO();
         String idParam = request.getParameter("id");

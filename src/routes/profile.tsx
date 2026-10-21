@@ -125,7 +125,10 @@ function ProfileCreationPage() {
     let lastError: Error | null = null;
     for (const url of candidates) {
       try {
-        const res = await fetch(url, init);
+        const res = await fetch(url, {
+          ...init,
+          credentials: "include",
+        });
         if (res.status === 404 && !isLocal && !customBase) {
           throw new Error(
             "Career Connect backend is not connected. In production, configure VITE_BACKEND_URL in Vercel to point to your deployed Tomcat backend."

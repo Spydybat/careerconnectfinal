@@ -15,24 +15,15 @@ public class CareerServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     private void applyCors(HttpServletRequest request, HttpServletResponse response) {
-        String origin = request.getHeader("Origin");
-        if (origin != null && !origin.trim().isEmpty()) {
-            response.setHeader("Access-Control-Allow-Origin", origin);
-            response.setHeader("Vary", "Origin");
-        } else {
-            response.setHeader("Access-Control-Allow-Origin", "*");
-        }
-        response.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-        response.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With, Accept");
-        response.setHeader("Access-Control-Allow-Credentials", "true");
-        response.setHeader("Access-Control-Max-Age", "86400");
+        CorsUtil.applyCors(request, response);
     }
 
     @Override
     protected void doOptions(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        applyCors(request, response);
-        response.setStatus(HttpServletResponse.SC_OK);
+        if (!CorsUtil.handlePreflight(request, response)) {
+            response.setStatus(HttpServletResponse.SC_OK);
+        }
     }
 
     @Override

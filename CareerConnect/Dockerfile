@@ -16,20 +16,14 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 # Endpoints: /AuthServlet, /CareerServlet, /SessionTrackingServlet, /index-5a.html
 COPY WebApplication/CareerConnect.war /usr/local/tomcat/webapps/ROOT.war
 
+# Copy startup script for dynamic PORT handling (e.g., Render, Railway)
+COPY start-tomcat.sh /usr/local/tomcat/bin/start-tomcat.sh
+RUN sed -i 's/\r$//' /usr/local/tomcat/bin/start-tomcat.sh \
+    && chmod +x /usr/local/tomcat/bin/start-tomcat.sh
+
 # Set default environment variables
 ENV PORT=8080
 ENV JAVA_OPTS="-Dfile.encoding=UTF-8 -Xms256m -Xmx512m"
-
-# Cloud platforms like Render and Railway dynamically inject a $PORT environment variable.
-# This startup script dynamically configures Tomcat's HTTP connector to bind to $PORT.
-RUN echo '#!/bin/bash\n\
-set -e\n\
-TARGET_PORT=${PORT:-8080}\n\
-echo "Configuring Apache Tomcat HTTP connector to port $TARGET_PORT..."\n\
-sed -i "s/port=\"8080\"/port=\"$TARGET_PORT\"/g" /usr/local/tomcat/conf/server.xml\n\
-echo "Starting Apache Tomcat on port $TARGET_PORT..."\n\
-exec catalina.sh run' > /usr/local/tomcat/bin/start-tomcat.sh \
-    && chmod +x /usr/local/tomcat/bin/start-tomcat.sh
 
 # Expose default HTTP port
 EXPOSE 8080

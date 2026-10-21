@@ -7,25 +7,31 @@
     <display-name>CareerConnect-WT-Lab</display-name>
     <description>Career Connect Web Technology Lab - Servlets and JSP Applications</description>
 
-    <!-- Standard Tomcat Cross-Origin Resource Sharing (CORS) Filter -->
+    <!-- Remote IP Filter: detects HTTPS and client IP when behind reverse proxies (Render, Railway, Cloudflare, etc.) -->
     <filter>
-        <filter-name>CorsFilter</filter-name>
-        <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+        <filter-name>RemoteIpFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.RemoteIpFilter</filter-class>
         <init-param>
-            <param-name>cors.allowed.origins</param-name>
-            <param-value>*</param-value>
+            <param-name>protocolHeader</param-name>
+            <param-value>X-Forwarded-Proto</param-value>
         </init-param>
         <init-param>
-            <param-name>cors.allowed.methods</param-name>
-            <param-value>GET,POST,HEAD,OPTIONS,PUT,DELETE</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cors.allowed.headers</param-name>
-            <param-value>Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization</param-value>
+            <param-name>remoteIpHeader</param-name>
+            <param-value>X-Forwarded-For</param-value>
         </init-param>
     </filter>
     <filter-mapping>
-        <filter-name>CorsFilter</filter-name>
+        <filter-name>RemoteIpFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- Career Connect CORS Security & Dynamic Cross-Site Cookie Filter -->
+    <filter>
+        <filter-name>CorsSecurityFilter</filter-name>
+        <filter-class>CorsSecurityFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CorsSecurityFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
@@ -59,9 +65,14 @@
         <url-pattern>/AuthServlet</url-pattern>
     </servlet-mapping>
 
-    <!-- Session Timeout Configuration (in minutes) -->
+    <!-- Session Configuration -->
     <session-config>
         <session-timeout>30</session-timeout>
+        <cookie-config>
+            <http-only>true</http-only>
+            <path>/</path>
+        </cookie-config>
+        <tracking-mode>COOKIE</tracking-mode>
     </session-config>
 
     <!-- Welcome File List -->

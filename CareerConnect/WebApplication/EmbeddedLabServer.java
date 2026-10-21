@@ -110,15 +110,43 @@ public class EmbeddedLabServer {
             Map<String, Object> sessionData = new ConcurrentHashMap<>();
             sessionData.put("_created", System.currentTimeMillis());
             SESSIONS.put(sessionId, sessionData);
-            exchange.getResponseHeaders().add("Set-Cookie", "JSESSIONID=" + sessionId + "; Path=/; HttpOnly");
+            String cookie = "JSESSIONID=" + sessionId + "; Path=/; HttpOnly";
+            String origin = exchange.getRequestHeaders().getFirst("Origin");
+            if (origin != null && origin.toLowerCase().startsWith("https://")) {
+                cookie += "; Secure; SameSite=None";
+            } else {
+                cookie += "; SameSite=Lax";
+            }
+            exchange.getResponseHeaders().add("Set-Cookie", cookie);
         }
         return sessionId;
     }
 
+    private static final Set<String> ALLOWED_ORIGINS = new HashSet<>(Arrays.asList(
+        "https://careerconnectfinal.vercel.app",
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "http://localhost:8080",
+        "http://localhost:8085",
+        "http://127.0.0.1:5173",
+        "http://127.0.0.1:3000",
+        "http://127.0.0.1:8080",
+        "http://127.0.0.1:8085"
+    ));
+
     private static void applyCorsHeaders(HttpExchange exchange) {
-        exchange.getResponseHeaders().set("Access-Control-Allow-Origin", "*");
-        exchange.getResponseHeaders().set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-        exchange.getResponseHeaders().set("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With");
+        String origin = exchange.getRequestHeaders().getFirst("Origin");
+        if (origin != null && !origin.trim().isEmpty()) {
+            String norm = origin.trim().replaceAll("/+$", "");
+            if (ALLOWED_ORIGINS.contains(norm) || (norm.startsWith("https://careerconnectfinal-") && norm.endsWith(".vercel.app"))) {
+                exchange.getResponseHeaders().set("Access-Control-Allow-Origin", norm);
+                exchange.getResponseHeaders().set("Access-Control-Allow-Credentials", "true");
+                exchange.getResponseHeaders().set("Vary", "Origin");
+            }
+        }
+        exchange.getResponseHeaders().set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        exchange.getResponseHeaders().set("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With, Accept, Origin");
+        exchange.getResponseHeaders().set("Access-Control-Max-Age", "86400");
     }
 
     // Static files handler (serves HTML and JSP template forms)

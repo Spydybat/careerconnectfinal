@@ -9,9 +9,20 @@ import javax.servlet.http.*;
  * Author: Kalaiyarasan K (9943)
  */
 public class SessionTrackingServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    @Override
+    protected void doOptions(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        if (!CorsUtil.handlePreflight(request, response)) {
+            response.setStatus(HttpServletResponse.SC_OK);
+        }
+    }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        CorsUtil.applyCors(request, response);
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 

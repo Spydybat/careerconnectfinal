@@ -1,4 +1,13 @@
 .git
 .github
+.vscode
+.idea
 *.log
 *.tmp
+EX-*
+WebApplication/src
+WebApplication/test
+WebApplication/web
+WebApplication/*.class
+WebApplication/*.java
+WebApplication/*.md
