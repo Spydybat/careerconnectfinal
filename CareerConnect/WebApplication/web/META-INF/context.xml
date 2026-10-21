@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context sessionCookiePath="/" useHttpOnly="true">
-    <!-- Enforce RFC 6265 Cookie Processor with SameSite=None for cross-origin HTTPS -->
+<Context>
     <CookieProcessor className="org.apache.catalina.core.Rfc6265CookieProcessor"
                      sameSiteCookies="none" />
 </Context>
