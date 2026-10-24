@@ -33,7 +33,7 @@ String goals = request.getParameter("goals");
 
 String url = System.getenv("DB_URL") != null 
     ? System.getenv("DB_URL") 
-    : "jdbc:sqlserver://103.207.1.91:1433;databaseName=CSE9596;encrypt=true;trustServerCertificate=true";
+    : "jdbc:sqlserver://103.207.1.91:1433;databaseName=CSE9943;encrypt=true;trustServerCertificate=true";
 String username = System.getenv("DB_USER") != null ? System.getenv("DB_USER") : "MZ";
 String password = System.getenv("DB_PASSWORD") != null ? System.getenv("DB_PASSWORD") : "mzcet@1234";
 

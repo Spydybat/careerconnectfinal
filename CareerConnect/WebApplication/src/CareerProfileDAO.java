@@ -14,7 +14,7 @@ public class CareerProfileDAO {
             ? System.getenv("DB_URL") 
             : (System.getenv("JDBC_URL") != null 
                 ? System.getenv("JDBC_URL") 
-                : "jdbc:sqlserver://103.207.1.91:1433;databaseName=CSE9596;encrypt=true;trustServerCertificate=true");
+                : "jdbc:sqlserver://103.207.1.91:1433;databaseName=CSE9943;encrypt=true;trustServerCertificate=true");
 
     private static final String DEFAULT_USER = 
         System.getenv("DB_USER") != null 

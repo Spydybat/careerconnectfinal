@@ -44,3 +44,8 @@ scratch/
 .env
 .env.*
 !.env.example
+
+# Database backups and migration dumps containing credentials/hashes (never commit)
+CareerConnect/EX-6/backup_*.sql
+CareerConnect/EX-6/admin_create_*.sql
+*.backup.sql
