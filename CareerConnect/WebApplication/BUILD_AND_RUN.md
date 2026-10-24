@@ -14,11 +14,12 @@ This document describes how to compile, package, run, and deploy the native Java
 
 ## 2. Compilation Instructions
 
-To compile the Java source files (`CareerProfile.java`, `CareerProfileDAO.java`, `CareerServlet.java`, `CareerServlet6B.java`, `SessionTrackingServlet.java`) against the Apache Tomcat Servlet & JSP APIs:
+To compile the Java source files against the Apache Tomcat Servlet & JSP APIs (targeting Java 17 LTS for Tomcat 9 production deployment):
 
 ```powershell
 # From project root (d:\Downloads\WTCC2):
-javac -cp ".;apache-tomcat-9.0.86\lib\servlet-api.jar;apache-tomcat-9.0.86\lib\jsp-api.jar;apache-tomcat-9.0.86\lib\mssql-jdbc.jar" `
+javac --release 17 `
+      -cp ".;apache-tomcat-9.0.86\lib\servlet-api.jar;apache-tomcat-9.0.86\lib\jsp-api.jar;apache-tomcat-9.0.86\lib\mssql-jdbc.jar" `
       -d "CareerConnect\WebApplication\web\WEB-INF\classes" `
       "CareerConnect\WebApplication\src\*.java"
 ```
