@@ -177,7 +177,7 @@ export function AdminDashboardPage() {
                 <Database className="size-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
                 <div>
                   <p className="text-xs font-bold text-foreground">Microsoft SQL Server</p>
-                  <p className="text-[10px] text-muted-foreground">Connected: CSE9596 @ 103.207.1.91</p>
+                  <p className="text-[10px] text-muted-foreground">Connected: CSE9943 @ 103.207.1.91</p>
                 </div>
               </div>
               <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-border/70">
