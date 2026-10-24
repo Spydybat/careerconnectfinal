@@ -108,6 +108,11 @@ export function RegisteredUserDirectory({
         } else if (data.error) {
           setFeedback({ type: "error", text: data.error });
         }
+      } else if (res.status === 401 || res.status === 403) {
+        setFeedback({
+          type: "error",
+          text: "Administrator session may have expired or you do not have permission. Please sign in again.",
+        });
       } else {
         setFeedback({ type: "error", text: "Failed to connect to Microsoft SQL Server user directory." });
       }
